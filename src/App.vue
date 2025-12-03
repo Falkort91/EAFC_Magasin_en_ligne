@@ -1,11 +1,19 @@
-<script setup></script>
+<script setup>
+import AppHeader from './components/AppHeader.vue';
+import ShoppingCard from './components/shoppingcart/ShoppingCart.vue';
+import AppFooter from './components/AppFooter.vue';
+import ProductList from './components/catalog/ProductList.vue';
+</script>
 
 <template>
-  <h1>You did it!</h1>
-  <p>
-    Visit <a href="https://vuejs.org/" target="_blank" rel="noopener">vuejs.org</a> to read the
-    documentation
-  </p>
+  <app-header/>
+  <main class="container mx-auto py-8 px-4 flex flex-wrap">
+    <product-list apiURL ="https://69307a0a778bbf9e00718f23.mockapi.io"/>
+    <ShoppingCard />
+  </main>
+  <app-footer/>
 </template>
 
-<style scoped></style>
+<style scoped>
+
+</style>
