@@ -1,5 +1,9 @@
 <script setup>
 import MyButton from '@/components/ui/MyButton.vue';
+
+const props = defineProps({
+     product:{type:Object, required:true},
+})
 </script>
 
 <template>
@@ -13,7 +17,9 @@ import MyButton from '@/components/ui/MyButton.vue';
                 Nom du produit
             </h2>
             <p class="text-gray-700">€50.00</p>
-            <my-button/>
+            <my-button>
+                Ajouter
+            </my-button>
         </div>
     </article>
 </template>

@@ -21,7 +21,9 @@ import DeliveryChoice from './DeliveryChoice.vue';
                 <span><strong>Total Général:</strong></span>
                 <span>€65.00</span>
               </div>
-              <my-button/>
+              <my-button>
+                Procéder au paiement
+              </my-button>
             </div>
           </div>
 </template>
