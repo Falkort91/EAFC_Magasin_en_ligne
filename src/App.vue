@@ -8,7 +8,7 @@ import ProductsList from './components/catalog/ProductsList.vue';
 <template>
   <app-header/>
   <main class="container mx-auto py-8 px-4 flex flex-wrap">
-    <products-list apiURL ="https://69307a0a778bbf9e00718f23.mockapi.io/"/>
+    <products-list apiUrl="https://69307a0a778bbf9e00718f23.mockapi.io/"/>
     <ShoppingCard />
   </main>
   <app-footer/>

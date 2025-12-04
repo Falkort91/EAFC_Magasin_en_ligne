@@ -1,17 +1,23 @@
 export default class DB{
 
-  static setApiURL(data){
-    this.apiURL = data;
+  static setApiUrl(url){
+    this.apiUrl = url;
   }
+
   static async findAll(){
-    const response = await fetch(this.apiURL + "products");
+    const response = await fetch(this.apiUrl + "products");
     return response.json();
   }
   
   static async deleteOneById(id){
-    const response = await fetch(this.apiURL+"products/"+id,{
+    const response = await fetch(this.apiUrl+"products/"+id,{
       method:"DELETE"
     });
     return response.json();
+  }
+
+
+  static createNewItem(products) {
+    localStorage.setItem('cartItems', JSON.stringify(products))
   }
 }
