@@ -1,7 +1,10 @@
 <script setup>
+import { shoppingcartStore } from '@/store/shoppingcart';
 const props = defineProps({
      item:{type:Object, required:true},
 })
+
+
 </script>
 
 <template>
@@ -9,6 +12,7 @@ const props = defineProps({
             class="form-input mt-1 block w-16 text-center rounded text-gray-700 border-gray-300 border"
             :value="props.item.quantity"
             min="1"
+            @change="shoppingcartStore.updateQuantity(props.item.id, $event.target.value)"
     />
 </template>
 

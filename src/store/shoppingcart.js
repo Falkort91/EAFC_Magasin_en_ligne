@@ -24,8 +24,15 @@ const addItem = (product) =>{
   }
 };
 
+const updateQuantity=(id, quantity)=>{
+  const indexItem = items.findIndex((item)=>item.id===id);
+  items[indexItem].quantity=Number(quantity);
+  DB.updateQuantity(items);
+}
+
 export const shoppingcartStore =reactive({
     items,
     init,
-    addItem
+    addItem,
+    updateQuantity
 })

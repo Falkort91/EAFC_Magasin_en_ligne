@@ -20,4 +20,8 @@ export default class DB{
   static createNewItem(products) {
     localStorage.setItem('cartItems', JSON.stringify(products))
   }
+
+  static updateQuantity(products){
+    localStorage.setItem('cartItems', JSON.stringify(products))
+  }
 }
