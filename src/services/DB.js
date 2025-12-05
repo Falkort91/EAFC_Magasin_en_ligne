@@ -9,19 +9,16 @@ export default class DB{
     return response.json();
   }
   
-  static async deleteOneById(id){
-    const response = await fetch(this.apiUrl+"products/"+id,{
-      method:"DELETE"
-    });
-    return response.json();
+  static deleteOneById(itemCart){
+    localStorage.setItem('cartItems', JSON.stringify(itemCart))
   }
 
 
-  static createNewItem(products) {
-    localStorage.setItem('cartItems', JSON.stringify(products))
+  static createNewItem(itemCart) {
+    localStorage.setItem('cartItems', JSON.stringify(itemCart))
   }
 
-  static updateQuantity(products){
-    localStorage.setItem('cartItems', JSON.stringify(products))
+  static updateQuantity(itemCart){
+    localStorage.setItem('cartItems', JSON.stringify(itemCart))
   }
 }

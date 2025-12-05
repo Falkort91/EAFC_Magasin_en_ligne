@@ -1,6 +1,7 @@
 <script setup>
 import DeleteButton from '@/components/ui/DeleteButton.vue';
 import QuantityChoice from '@/components/ui/QuantityChoice.vue';
+import { shoppingcartStore } from '@/store/shoppingcart';
 
 const props = defineProps({
      item:{type:Object, required:true},
@@ -24,7 +25,7 @@ const srcimg = `https://picsum.photos/300/200/?random=${props.item.id}`
               </div>
               <div class="flex items-center">
                 <quantity-choice :item="props.item"/>
-                <delete-button/>
+                <delete-button @deleteItem="shoppingcartStore.deleteItem(props.item.id)"/>
               </div>
             </li>
             <!-- Repeat for other cart items -->

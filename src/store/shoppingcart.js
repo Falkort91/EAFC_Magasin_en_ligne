@@ -10,15 +10,15 @@ const init = () => {
   console.table(items)
 };
 
-const addItem = (product) =>{
-  const existItem = items.findIndex((i)=> i.id===product.id)
+const addItem = (itemCart) =>{
+  const existItem = items.findIndex((i)=> i.id===itemCart.id)
   if(existItem !== -1){
     items[existItem].quantity += 1;
     DB.createNewItem(items);
     console.log(items);
   }else{
-    product.quantity=1;
-    items.push(product);
+    itemCart.quantity=1;
+    items.push(itemCart);
     DB.createNewItem(items);
     console.log(items); 
   }
@@ -30,9 +30,19 @@ const updateQuantity=(id, quantity)=>{
   DB.updateQuantity(items);
 }
 
+const deleteItem=(id)=>{
+  const indexItem = items.findIndex((item)=>item.id===id);
+  if(id!==-1){
+    items.splice(indexItem,1);
+    DB.deleteOneById(items)
+  }
+
+}
+
 export const shoppingcartStore =reactive({
     items,
     init,
     addItem,
-    updateQuantity
+    updateQuantity,
+    deleteItem
 })
