@@ -52,8 +52,13 @@ const TVA = computed(()=>{
 const deliveryCost=ref(5);
 
 const totalPrice = computed(()=>{
-  return (Number(subPrice.value) + Number(TVA.value) + Number(deliveryCost.value)).toFixed(2)}
+  return (Number(subPrice.value) + Number(TVA.value) + ( items.length==0 ? 0 : Number(deliveryCost.value))).toFixed(2)}
 );
+
+const resetCart = () =>{
+  items.length=0;
+  DB.resetCart(items);
+}
 
 export const shoppingcartStore =reactive({
     items,
@@ -64,5 +69,6 @@ export const shoppingcartStore =reactive({
     subPrice,
     TVA,
     deliveryCost,
-    totalPrice
+    totalPrice,
+    resetCart
 })

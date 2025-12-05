@@ -21,4 +21,8 @@ export default class DB{
   static updateQuantity(itemCart){
     localStorage.setItem('cartItems', JSON.stringify(itemCart))
   }
+
+  static resetCart(itemCart){
+    localStorage.setItem('cartItems', JSON.stringify(itemCart))
+  }
 }

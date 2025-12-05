@@ -22,7 +22,7 @@ import { shoppingcartStore } from '@/store/shoppingcart';
                 <span><strong>Total Général:</strong></span>
                 <span>{{ shoppingcartStore.totalPrice }} €</span>
               </div>
-              <my-button>
+              <my-button @click="shoppingcartStore.resetCart">
                 Procéder au paiement
               </my-button>
             </div>
