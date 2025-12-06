@@ -9,7 +9,7 @@ export default class DB{
     return response.json();
   }
   
-  static deleteOneById(itemCart){
+  /* static deleteOneById(itemCart){
     localStorage.setItem('cartItems', JSON.stringify(itemCart))
   }
 
@@ -23,6 +23,10 @@ export default class DB{
   }
 
   static resetCart(itemCart){
+    localStorage.setItem('cartItems', JSON.stringify(itemCart))
+  } */
+
+  static updateLoacalStorage(itemCart){
     localStorage.setItem('cartItems', JSON.stringify(itemCart))
   }
 }

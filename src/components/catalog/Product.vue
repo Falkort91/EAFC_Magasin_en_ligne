@@ -5,7 +5,10 @@ import {shoppingcartStore} from '@/store/shoppingcart';
 const props = defineProps({
      product:{type:Object, required:true},
 })
+
+// Image aléatoire en prenant en compte l'id du product comme variable pour ne pas avoir la même image à chaque product (permet également d'avoir la même image dans mon catalogue et ma shoppingcart quand il s'agit du même objet).
 const srcimg = `https://picsum.photos/300/200/?random=${props.product.id}`
+
 </script>
 
 <template>
