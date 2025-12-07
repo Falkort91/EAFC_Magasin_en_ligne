@@ -10,6 +10,7 @@ export default defineConfig({
     vue(),
     vueDevTools(),
   ],
+  base: '/EAFC_Magasin_en_ligne/', 
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
