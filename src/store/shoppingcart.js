@@ -37,7 +37,7 @@ const addItem = (itemCart) =>{
     items[existItemIndex].quantity += 1;
    // DB.createNewItem(items);
   }else{
-    //Si la quantité est égale à  on push l'objet dans le tableau
+    //Si la quantité est égale à 1 on push l'objet dans le tableau
     itemCart.quantity=1;
     items.push(itemCart);
    // DB.createNewItem(items);
