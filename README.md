@@ -1,20 +1,20 @@
 Demo:[Shop and ShoppingCart](https://falkort91.github.io/EAFC_Magasin_en_ligne/)
 
-CAHIER DES CHARGES FRAMEWORK CLIENT
-SHOPPING CART
+# Cahier des charges — Framework Client Shopping Cart
 
-Features obligatoires
-	- Liste dynamique des produits depuis mockAPI
-	- Ajout dans le panier
-	- Liste dynamique des produits du panier
-	- Calcul dynalmique du total HTVA
-	- Modification de la quantité des produits du panier
-	- Suppression des produits du panier
+## Features obligatoires
+- Liste dynamique des produits depuis MockAPI  
+- Ajout dans le panier  
+- Liste dynamique des produits du panier  
+- Calcul dynamique du total HTVA  
+- Modification de la quantité des produits du panier  
+- Suppression des produits du panier  
 
-	- Structure avec un store products avec un DB.js
-	  et un store shoppingCart 
+### Structure
+- Un store `products` avec un `DB.js`  
+- Un store `shoppingCart`
 
-Features Optionnelles	
-	- Calcul dynamique de la TVA et modification des frais de port.
-	- Shoppingcart dans le localstorage avec un watcher
-	- Les btn en components ui (./components/ui/MyButton.vue)
+## Features optionnelles
+- Calcul dynamique de la TVA et modification des frais de port  
+- Shopping cart dans le localStorage avec un watcher  
+- Les boutons en composants UI (`./components/ui/MyButton.vue`)
